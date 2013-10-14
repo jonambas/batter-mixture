@@ -5,7 +5,7 @@
     "preprocessorScriptOutput": "public/scripts",
     "preprocessorStyleOutput": "public/styles",
     "projectName": "Jons Boiler",
-    "projectDescription": "Quick start Compass with Mixture, Compass is an open-source CSS Authoring Framework.",
+    "projectDescription": "SASS, Compass, Normalize, Jon's reset.css, jQuery CDN",
     "publishedId": null,
     "serverHostname": null,
     "serverPort": null,
