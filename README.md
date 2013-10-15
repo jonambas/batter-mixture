@@ -2,14 +2,15 @@ jons-mixture-boilerplate
 
 ### Just a Mixture Boilerplate ###
 
-#### mixins ###
+##### mixins #####
 - @mixin clearfix
 - @mixin setFont($family, $size, $weight)
 - @mixin fullHeight
 - @mixin cover($url)
 - @mixin hoverActiveFocus($property, $value)
+- @mixin hide-text
 
-#### includes ####
+##### includes #####
 - sass
 - compass
 - normalize
