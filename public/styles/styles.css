@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 html {
-  font-size: 16px;
   background-color: whitesmoke;
   color: #333;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -33,12 +32,7 @@ ol, ul {
 }
 
 .container {
-  width: 980px;
+  max-width: 980px;
+  width: 92%;
   margin: 0 auto;
-}
-@media screen and (max-width: 1060px) {
-  .container {
-    width: 92%;
-    margin: 0 4%;
-  }
 }
