@@ -1,5 +1,3 @@
-jons-mixture-boilerplate
-
 ### Just a Mixture Boilerplate ###
 
 ##### mixins #####
