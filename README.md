@@ -8,8 +8,3 @@
 - @mixin hoverActiveFocus($property, $value)
 - @mixin hideText
 
-##### includes #####
-- sass
-- compass
-- normalize
-
