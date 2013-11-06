@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}Mixture + Compass{% endblock %}</title>
-        <meta name="viewport" content="initial-scale=1">
-        {{ "styles.css" | asset_url | stylesheet_tag }}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css">
-        
+        {{ "styles.css" | asset_url | stylesheet_tag }}
 
         <!-- TODO: Complete this project :) -->
     </head>
