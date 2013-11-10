@@ -1,8 +1,0 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
-
-$open-sans: 'Open Sans', sans-serif;
-
-html {
-  color: #5a5a5a;
-  @include set-font($open-sans, 16px, 400);
-}

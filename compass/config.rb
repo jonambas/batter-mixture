@@ -12,4 +12,4 @@ line_comments = false # if debugging (or using Mixture chrome extension - set th
 cache = true
 color_output = false # required for Mixture
 
-project_path =File.expand_path("..",File.dirname(__FILE__))
+project_path =File.expand_path('..',File.dirname(__FILE__))
