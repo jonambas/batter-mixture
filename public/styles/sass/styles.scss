@@ -1,52 +1,5 @@
-<<<<<<< HEAD
 @import "noncompile";
 @import "typography";
-=======
-@import "compass";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
-
-// Jon's CSS
-$open-sans: 'Open Sans', sans-serif;
-
-@mixin setFont($family, $size, $weight){
-  font:{
-    family: $family;
-    size: $size;
-    weight: $weight;
-  }
-}
-@mixin clearfix{
-  &:before, &:after{
-    display: table;
-    content: "";
-  }
-  &:after {
-      clear:both;
-  }
-}
-
-@mixin fullHeight {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-@mixin cover($url) {
-  background: url($url) no-repeat center center fixed;
-  @include background-size(cover); 
-}
-
-@mixin hoverActiveFocus($property, $value) {
-    &:hover, &:active, &:focus {
-        #{$property}: $value;
-    }
-}
-@mixin hideText{
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
->>>>>>> c751f0cbe52d911908d34e97cc1ff0a9cea1efd9
 
 html {
   background-color: whitesmoke;
