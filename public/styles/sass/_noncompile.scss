@@ -11,8 +11,10 @@
 
 @mixin clearfix{
   &:before, &:after{
-    display: table;
-    content: "";
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
   }
   &:after {
       clear:both;
@@ -57,10 +59,11 @@ ol, ul {
   list-style: none;
 }
 
-//Vertical Rhythm
+//Setting Vertical Rhythm
 h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dd,
 p,figure,
 pre,table,fieldset,hr{
-    margin-bottom:1.5rem;
+  margin-top: 0;
+  margin-bottom:1.5rem;
 }
