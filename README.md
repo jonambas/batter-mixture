@@ -1,10 +1,10 @@
 ### Just a Mixture Boilerplate ###
 
-##### some mixins #####
+##### Some Mixins #####
 - @mixin clearfix
-- @mixin setFont($family, $size, $weight)
-- @mixin fullHeight
+- @mixin set-font($family, $size, $weight)
+- @mixin full-height
 - @mixin cover($url)
-- @mixin hoverActiveFocus($property, $value)
-- @mixin hideText
+- @mixin hover-active-focus($property, $value)
+- @mixin hide-text
 
