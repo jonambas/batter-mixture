@@ -5,11 +5,11 @@ $open-sans: 'Open Sans', sans-serif;
 $base-color: #4a4a4a;
 
 html {
-  	color: $base-color;
-  	font-size: 62.5%;
+ 	color: $base-color;
+ 	font-size: 62.5%;
 }
 
-body{
+body{	
 	@include set-font($open-sans, 1.6rem, 400);
 	line-height: 3rem;
 }
