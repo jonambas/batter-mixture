@@ -1,4 +1,5 @@
 @import "compass";
+@import "bits";
 
 //Jon's Mixins
 @mixin set-font($family, $size, $weight){
@@ -33,9 +34,9 @@
 }
 
 @mixin hover-active-focus($property, $value) {
-    &:hover, &:active, &:focus {
-        #{$property}: $value;
-    }
+  &:hover, &:active, &:focus {
+      #{$property}: $value;
+  }
 }
 
 @mixin hide-text{
@@ -44,10 +45,9 @@
   overflow: hidden;
 }
 
-//Some css
+//Some Reset CSS
 html, body {
   width: 100%;
-  height: 100%;
 }
 
 table {
@@ -55,15 +55,11 @@ table {
   border-spacing: 0;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 //Setting Vertical Rhythm
-h1,h2,h3,h4,h5,h6,hgroup,
+h1,h2,h3,h4,h5,h6,
 ul,ol,dd,
 p,figure,
 pre,table,fieldset,hr{
   margin-top: 0;
-  margin-bottom:1.5rem;
+  margin-bottom: $vertical-rhythm;
 }

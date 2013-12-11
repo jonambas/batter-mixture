@@ -2,65 +2,61 @@
 
 $open-sans: 'Open Sans', sans-serif;
 
-$base-color: #4a4a4a;
-
 html {
- 	color: $base-color;
- 	font-size: 62.5%;
+  color: $text-base;
+  font-size: 62.5%;
 }
 
-body{	
-	@include set-font($open-sans, 1.6rem, 400);
-	line-height: 3rem;
+body{   
+  @include set-font($open-sans, 1.6rem, 400);
+  line-height: 3rem;
+}
+
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  &::selection{
+    //Changing color on selection bugs out with SVG fonts.
+    //{color: inherit} fixes this.
+    //color: inherit;
+  }
 }
 
 h1 {
-    font-size: 4rem;
-    line-height: 4.6rem;
+  font-size: 4rem;
+  line-height: 4.6rem;
 }
 
 h2 {
-    font-size: 3.4rem;
-    line-height: 4rem;
+  font-size: 3.4rem;
+  line-height: 4rem;
 }
 
 h3 {
-    font-size: 2.8rem;
-    line-height: 3.4rem;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
 }
 
 h4 {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 
 h5 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h6 {
-    font-size: 1.6rem;
-}
-
-::-moz-selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
-}
-
-::selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
-}
-
-//Changing color on selection bugs out with SVG fonts.
-//{color: inherit} fixes this.
-h1::selection, h2::selection, h3::selection, h4::selection, 
-h5::selection, h6::selection{
-    color: inherit;
+  font-size: 1.6rem;
 }
