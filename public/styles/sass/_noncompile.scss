@@ -2,15 +2,7 @@
 @import "bits";
 
 //Jon's Mixins
-@mixin set-font($family, $size, $weight){
-  font:{
-    family: $family;
-    size: $size;
-    weight: $weight;
-  }
-}
-
-@mixin clearfix{
+@mixin clearfix {
   &:before, &:after{
     content: "\0020";
     display: block;
@@ -39,27 +31,80 @@
   }
 }
 
-@mixin hide-text{
+@mixin hide-text {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-//Some Reset CSS
-html, body {
-  width: 100%;
+@mixin set-font($family, $size, $weight) {
+  font:{
+    family: $family;
+    weight: $weight;
+  }
+  @include set-font-size($size);
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+@mixin set-font-size($size) {
+  font-size: 0px + $size;
+  font-size: 0rem + $size / $base-font-size;
+}
+
+@mixin set-vertical-rhythm($size) {
+  margin-bottom: 0px + $size;
+  margin-bottom: 0rem + $size / $base-font-size;
+}
+
+@mixin set-line-height($size) {
+  line-height: 0px + $size;
+  line-height: 0rem + $size / $base-font-size;
+}
+
+@mixin image-fix {
+  -webkit-backface-visibility: hidden; //fixes jittering on image animations
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation; 
+  -moz-animation:    $animation;
+  -o-animation:      $animation;
+  animation:         $animation;
 }
 
 //Setting Vertical Rhythm
-h1,h2,h3,h4,h5,h6,
 ul,ol,dd,
 p,figure,
-pre,table,fieldset,hr{
+pre,table,fieldset,hr {
   margin-top: 0;
-  margin-bottom: $vertical-rhythm;
+  @include set-vertical-rhythm($vertical-rhythm);
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  padding-top: 0px + $vertical-rhythm * 0.5;
+  padding-top: 0rem + $vertical-rhythm * 0.5 / $base-font-size;
+  @include set-vertical-rhythm($vertical-rhythm * 0.5);
 }

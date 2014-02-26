@@ -3,20 +3,8 @@
   "modelDate": "11.14.2012",
   "people": [
     {
-      "name": "Neil Kinnish",
-      "twitter": "@neiltak"
-    },
-    {
-      "name": "Mike Kus",
-      "twitter": "@mikekus"
-    },
-    {
-      "name": "Pete Nelson",
-      "twitter": "@petetak"
-    },
-    {
       "name": "Jon Ambas",
-      "twitter": "@jonshunggry"
+      "twitter": "@jonshungry"
     }
   ]
 }

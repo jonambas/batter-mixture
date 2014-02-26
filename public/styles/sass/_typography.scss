@@ -1,25 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 
 $open-sans: 'Open Sans', sans-serif;
 
 html {
-  color: $text-base;
-  font-size: 62.5%;
+  color: $color-text-base;
 }
 
 body{   
-  @include set-font($open-sans, 1.6rem, 400);
-  line-height: 3rem;
+  @include set-font($open-sans, $base-font-size, 300);
+  @include set-line-height(28);
 }
 
 ::-moz-selection {
-  color: #222;
+  color: #111;
   background: #D6EDFF;
   text-shadow: none;
 }
 
 ::selection {
-  color: #222;
+  color: #111;
   background: #D6EDFF;
   text-shadow: none;
 }
@@ -27,6 +26,9 @@ body{
 h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
+  color:  $color-text-header;
+  line-height: 1.1em;
+  @include set-font($open-sans, 16, 300);
   &::selection{
     //Changing color on selection bugs out with SVG fonts.
     //{color: inherit} fixes this.
@@ -35,28 +37,25 @@ h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
-  line-height: 4.6rem;
+  @include set-font-size(36);
 }
 
 h2 {
-  font-size: 3.4rem;
-  line-height: 4rem;
+  @include set-font-size(32);
 }
 
 h3 {
-  font-size: 2.8rem;
-  line-height: 3.4rem;
+  @include set-font-size(28);
 }
 
 h4 {
-  font-size: 2.4rem;
+  @include set-font-size(24);
 }
 
 h5 {
-  font-size: 2rem;
+  @include set-font-size(20);
 }
 
 h6 {
-  font-size: 1.6rem;
+  @include set-font-size(16);
 }
