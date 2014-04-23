@@ -613,16 +613,18 @@ html, body {
 .batter {
   width: 100%;
   height: 100%;
+}
+.batter h1 {
   text-align: center;
 }
 
 .grid {
-  margin-bottom: 96px;
+  margin-top: 32px;
 }
 
 .grid div {
   height: 32px;
   margin-bottom: 20px;
   background-clip: content-box;
-  background-color: #1e2027;
+  background-color: #e1e1e1;
 }
