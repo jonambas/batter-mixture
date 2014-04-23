@@ -1,4 +1,10 @@
-@import "noncompile";
+@import "compass";
+@import "normalize";
+
+@import "bits";
+@import "functions";
+@import "base";
+@import "grid";
 @import "typography";
 
 html {
@@ -29,4 +35,14 @@ html, body {
 	height: 100%;
 
 	text-align: center;
+}
+
+.grid{
+	margin-bottom: base(6);
+}
+.grid div{
+	height: 32px;
+	margin-bottom: $gutter-width;
+	background-clip: content-box;
+	background-color: $color-background-dark;
 }

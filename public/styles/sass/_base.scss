@@ -1,0 +1,7 @@
+//Sets baseline vertical rhythm
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr {
+  margin-top: 0;
+  margin-bottom: base(1);
+}

@@ -4,8 +4,8 @@
     "preprocessorLocations": "public",
     "preprocessorScriptOutput": "public/scripts",
     "preprocessorStyleOutput": "public/styles",
-    "projectName": "Jons Boiler",
-    "projectDescription": "SASS, Compass, Normalize, Jon's reset.css, jQuery CDN",
+    "projectName": "Batter",
+    "projectDescription": "Sass, Compass, Normalize, some mixins and functions",
     "publishedId": null,
     "serverHostname": null,
     "serverPort": null,
@@ -29,5 +29,14 @@
     "ignoreDir": "ignore",
     "customTodos": null,
     "ftpSettings": null,
-    "autoPrefixer": null
+    "autoPrefixer": null,
+    "sass": {
+      "outputStyle": "nested",
+      "sourceMap": true,
+      "cache": false,
+      "lineNumbers": false,
+      "debugInfo": false,
+      "globbing": false,
+      "useLibSass": false
+    }
 }

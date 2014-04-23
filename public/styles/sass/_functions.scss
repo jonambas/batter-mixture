@@ -1,6 +1,3 @@
-@import "compass";
-@import "bits";
-
 //Jon's Mixins
 @mixin clearfix {
   &:before, &:after{
@@ -12,17 +9,6 @@
   &:after {
       clear: both;
   }
-}
-
-@mixin full-height {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-@mixin cover($url) {
-  background: url($url) no-repeat center center fixed;
-  @include background-size(cover); 
 }
 
 @mixin hover-active-focus($property, $value) {
@@ -37,6 +23,28 @@
   overflow: hidden;
 }
 
+@function base($n, $round: false) {
+  $result: $n * $baseline;
+
+  @if $round == "up" {
+    $result: ceil($result)
+  } @else if $round == "down" {
+    $result: floor($result)
+  }
+
+  @return $result;
+}
+
+@function toPx($n) {
+  $result: 0px + $n;
+  @return $result;
+}
+
+@function toRem($n) {
+  $result: 0rem + $n / $base-font-size;
+  @return $result;
+}
+
 @mixin set-font($family, $size, $weight) {
   font:{
     family: $family;
@@ -46,18 +54,8 @@
 }
 
 @mixin set-font-size($size) {
-  font-size: 0px + $size;
-  font-size: 0rem + $size / $base-font-size;
-}
-
-@mixin set-vertical-rhythm($size) {
-  margin-bottom: 0px + $size;
-  margin-bottom: 0rem + $size / $base-font-size;
-}
-
-@mixin set-line-height($size) {
-  line-height: 0px + $size;
-  line-height: 0rem + $size / $base-font-size;
+  font-size: toPx($size);
+  font-size: toRem($size);
 }
 
 @mixin image-fix {
@@ -95,16 +93,3 @@
   animation:         $animation;
 }
 
-//Setting Vertical Rhythm
-ul,ol,dd,
-p,figure,
-pre,table,fieldset,hr {
-  margin-top: 0;
-  @include set-vertical-rhythm($vertical-rhythm);
-}
-h1,h2,h3,h4,h5,h6 {
-  margin-top: 0;
-  padding-top: 0px + $vertical-rhythm * 0.5;
-  padding-top: 0rem + $vertical-rhythm * 0.5 / $base-font-size;
-  @include set-vertical-rhythm($vertical-rhythm * 0.5);
-}

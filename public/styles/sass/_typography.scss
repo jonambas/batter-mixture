@@ -7,9 +7,9 @@ html {
   font-size: $base-font-size + 0px;
 }
 
-body{   
+body {
+  line-height: 1.8em;
   @include set-font($open-sans, $base-font-size, 300);
-  @include set-line-height(28);
 }
 
 ::-moz-selection {
@@ -24,8 +24,9 @@ body{
   text-shadow: none;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+%header {
+  margin-top: 0;
+  margin-bottom: base(1);
   text-rendering: optimizeLegibility;
   color:  $color-text-header;
   line-height: 1.1em;
@@ -37,7 +38,19 @@ h4, h5, h6 {
   }
 }
 
-h1 {
+$headers: (1, 2, 3, 4, 5, 6);
+
+/* Produces 36, 32, 28, 24, 20, 16 font sizes under 16px base font */
+@each $header in $headers {
+  h#{$header} {
+    @extend %header;
+    @include set-font-size($base-font-size + (4 * (6 - $header)));
+  }
+}
+
+/* If you want to set header sizes individually */
+
+/* h1 {
   @include set-font-size(36);
 }
 
@@ -59,4 +72,4 @@ h5 {
 
 h6 {
   @include set-font-size(16);
-}
+} */
