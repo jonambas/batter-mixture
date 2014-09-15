@@ -3,8 +3,8 @@
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -533,30 +533,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
-/* Produces 36, 32, 28, 24, 20, 16 font sizes under 16px base font */
 h1 {
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 48px;
+  font-size: 3rem;
 }
 
 h2 {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+h3 {
   font-size: 32px;
   font-size: 2rem;
 }
 
-h3 {
+h4 {
   font-size: 28px;
   font-size: 1.75rem;
 }
 
-h4 {
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-
 h5 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 h6 {
@@ -564,30 +563,6 @@ h6 {
   font-size: 1rem;
 }
 
-/* If you want to set header sizes individually */
-/* h1 {
-  @include set-font-size(36);
-}
-
-h2 {
-  @include set-font-size(32);
-}
-
-h3 {
-  @include set-font-size(28);
-}
-
-h4 {
-  @include set-font-size(24);
-}
-
-h5 {
-  @include set-font-size(20);
-}
-
-h6 {
-  @include set-font-size(16);
-} */
 html {
   background-color: whitesmoke;
 }

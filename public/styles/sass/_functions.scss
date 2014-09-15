@@ -1,7 +1,7 @@
 //Jon's Mixins
 @mixin clearfix {
   &:before, &:after{
-    content: "\0020";
+    content: "";
     display: block;
     height: 0;
     overflow: hidden;

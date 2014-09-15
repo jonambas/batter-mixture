@@ -38,38 +38,12 @@ body {
   }
 }
 
-$headers: (1, 2, 3, 4, 5, 6);
+//Header Sizing
+$headers: (h1: 48, h2: 40, h3: 32, h4: 28, h5: 22, h6: 16);
 
-/* Produces 36, 32, 28, 24, 20, 16 font sizes under 16px base font */
-@each $header in $headers {
-  h#{$header} {
+@each $header, $size in $headers {
+  #{$header} {
     @extend %header;
-    @include set-font-size($base-font-size + (4 * (6 - $header)));
+    @include set-font-size($size);
   }
 }
-
-/* If you want to set header sizes individually */
-
-/* h1 {
-  @include set-font-size(36);
-}
-
-h2 {
-  @include set-font-size(32);
-}
-
-h3 {
-  @include set-font-size(28);
-}
-
-h4 {
-  @include set-font-size(24);
-}
-
-h5 {
-  @include set-font-size(20);
-}
-
-h6 {
-  @include set-font-size(16);
-} */
